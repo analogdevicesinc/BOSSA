@@ -28,11 +28,12 @@ INSTALLDIR=install
 # Determine OS
 #
 OS:=$(shell uname -s)
+$(info $(OS))
 
 #
 # Windows rules
 #
-ifeq ($(OS),MINGW32_NT-6.1)
+#ifeq ($(OS),MINGW32_NT-6.1)
 EXE=.exe
 COMMON_SRCS+=WinSerialPort.cpp WinPortFactory.cpp
 COMMON_LDFLAGS=-Wl,--enable-auto-import -static -static-libstdc++ -static-libgcc
@@ -57,7 +58,7 @@ install64: $(BINDIR)\\bossa64-$(VERSION).msi
 .PHONY: install
 install: strip install32 install64
 
-endif
+#endif
 
 #
 # Linux rules
