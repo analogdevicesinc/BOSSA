@@ -37,9 +37,9 @@ ifeq ($(OS),MINGW32_NT-6.2)
 EXE=.exe
 COMMON_SRCS+=WinSerialPort.cpp WinPortFactory.cpp
 COMMON_LDFLAGS=-Wl,--enable-auto-import -static -static-libstdc++ -static-libgcc
-COMMON_LIBS=-Wl,--as-needed -lsetupapi -ltermcap
+COMMON_LIBS=-Wl,--as-needed
 #BOSSA_RC=BossaRes.rc
-WIXDIR="C:\Program Files (x86)\Windows Installer XML v3.5\bin"
+#WIXDIR="C:\Program Files (x86)\Windows Installer XML v3.5\bin"
 
 #$(OBJDIR)\\bossa-$(VERSION).wixobj: $(INSTALLDIR)\\bossa.wxs
 #	$(WIXDIR)\\candle.exe -dVersion=$(VERSION) -arch x86 -out $@ -ext $(WIXDIR)\\WixUIExtension.dll -ext $(WIXDIR)\\WixDifxAppExtension.dll $<
