@@ -239,24 +239,6 @@ main(int argc, char* argv[])
         return help(argv[0]);
     }
 
-    if (config.help)
-    {
-        printf("Usage: %s [OPTION...] [FILE]\n", argv[0]);
-        printf("Basic Open Source SAM-BA Application (BOSSA) Version " VERSION "\n"
-               "Flash programmer for Atmel SAM devices.\n"
-               "Copyright (c) 2011-2012 ShumaTech (http://www.shumatech.com)\n"
-               "\n"
-               "Examples:\n"
-               "  bossac -e -w -v -b image.bin   # Erase flash, write flash with image.bin,\n"
-               "                                 # verify the write, and set boot from flash\n"
-               "  bossac -r0x10000 image.bin     # Read 64KB from flash and store in image.bin\n"
-              );
-        printf("\nOptions:\n");
-        cmd.usage(stdout);
-        printf("\nReport bugs to <bugs@shumatech.com>\n");
-        return 1;
-    }
-
     try
     {
         Samba samba;
