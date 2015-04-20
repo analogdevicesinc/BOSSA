@@ -12,7 +12,7 @@ install:
 
 build_script:
   - git submodule update --init --recursive
-  - mingw32-make -j8 bin/bossac
+  - mingw32-make -j8 bin/bossac.exe
 
 after_build:
   - appveyor PushArtifact bin/bossac.exe
