@@ -3,15 +3,15 @@ osx_image: xcode61
 language: objective-c
 before_install:
 - brew update
-script: 
+script:
 - make bin/bossac
 - mkdir deploy
 - cp bin/bossac deploy
 deploy:
   provider: s3
-  access_key_id: AKIAIQOIHEBDCDW7SGFA
+  access_key_id: AKIAIHMTFTT3MKICVLSQ
   secret_access_key:
-    secure: IsTspMVYrpXM7ZdETjq+2gHXixQU8NuvVxRXEJuYQgH19FJpWots+jnCufcAUramn32/ISPMCzqtRAHCsG5AicftolruHlrQlFxuQKLK6jGoEliv+1vHsymgTYA7ZmM1CebVxW2mNYPs1oSg9wEeCznpwSwhuWRnuBd2YHvFSWs=
+    secure: nCng/hGBHJ+yNufj0GQ+gg79k6p9RzEqJ0KqRIXkhhWlIbxvND8hVVqcLStbIxOS7tiYAefwmgorIlueaZGyJRpF6W3OcS2TW28zGMLSsc5omyC6UZYgHknoajkfxkly8eO85w5elDeU/vvg6xqMhe6al9Uk0B6LVr/IG2CdA9I=
   bucket: bossaosx
   skip_cleanup: true
   local_dir: deploy
@@ -19,4 +19,3 @@ deploy:
   on:
     repo: itdaniher/BOSSA
     all_branches: true
-
