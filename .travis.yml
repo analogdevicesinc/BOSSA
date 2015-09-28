@@ -1,8 +1,6 @@
 os: osx
 osx_image: xcode61
 language: objective-c
-before_install:
-- brew update
 script:
 - make bin/bossac
 - mkdir deploy
