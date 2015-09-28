@@ -3,7 +3,7 @@
 //
 // Copyright (c) 2011-2012, ShumaTech
 // All rights reserved.
-// 
+//
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are met:
 //     * Redistributions of source code must retain the above copyright
@@ -14,7 +14,7 @@
 //     * Neither the name of the <organization> nor the
 //       names of its contributors may be used to endorse or promote products
 //       derived from this software without specific prior written permission.
-// 
+//
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 // ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 // WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -237,6 +237,24 @@ main(int argc, char* argv[])
     {
         fprintf(stderr, "%s: extra arguments found\n", argv[0]);
         return help(argv[0]);
+    }
+
+    if (config.help)
+    {
+        printf("Usage: %s [OPTION...] [FILE]\n", argv[0]);
+        printf("Basic Open Source SAM-BA Application (BOSSA) Version " VERSION "\n"
+               "Flash programmer for Atmel SAM devices.\n"
+               "Copyright (c) 2011-2012 ShumaTech (http://www.shumatech.com)\n"
+               "\n"
+               "Examples:\n"
+               "  bossac -e -w -v -b image.bin   # Erase flash, write flash with image.bin,\n"
+               "                                 # verify the write, and set boot from flash\n"
+               "  bossac -r0x10000 image.bin     # Read 64KB from flash and store in image.bin\n"
+              );
+        printf("\nOptions:\n");
+        cmd.usage(stdout);
+        printf("\nReport bugs to <bugs@shumatech.com>\n");
+        return 1;
     }
 
     try
