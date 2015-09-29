@@ -25,5 +25,5 @@ RELEASE NOTES
 
 Binaries:
 
- * [OSX](http://bossaosx.s3-website-us-west-2.amazonaws.com/bossac)
- * [Win32](https://ci.appveyor.com/project/analogdevicesinc/bossa/build/artifacts)
+ * OSX - http://bossaosx.s3-website-us-west-2.amazonaws.com/bossac
+ * Win32 - https://ci.appveyor.com/project/analogdevicesinc/bossa/build/artifacts
