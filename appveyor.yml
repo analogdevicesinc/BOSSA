@@ -16,3 +16,7 @@ build_script:
 
 after_build:
   - appveyor PushArtifact bin/bossac.exe
+
+cache:
+ - c:\mingw.7z -> appveyor.yml
+ - c:\msys.zip -> appveyor.yml
