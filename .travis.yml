@@ -7,9 +7,9 @@ script:
 - cp bin/bossac deploy
 deploy:
   provider: s3
-  access_key_id: AKIAIHMTFTT3MKICVLSQ
+  access_key_id: AKIAJIUMJWTHBLSLXXPA
   secret_access_key:
-    secure: nCng/hGBHJ+yNufj0GQ+gg79k6p9RzEqJ0KqRIXkhhWlIbxvND8hVVqcLStbIxOS7tiYAefwmgorIlueaZGyJRpF6W3OcS2TW28zGMLSsc5omyC6UZYgHknoajkfxkly8eO85w5elDeU/vvg6xqMhe6al9Uk0B6LVr/IG2CdA9I=
+    secure: fAnkY7ZrbN1JzCY2vJ2VNfuG6ipIEPufcV0fL54bKz3AgiywtMfCDbhb+CUZVqCMMlsqZaO/rggz3/ODEQwz2WFJ4jlNqtP5o24NwIFKLWe3wq4DOU0tfQgsC4E+HsnrholsLTIWA5nKgLF6KtLNwPguq+fytvmWqv3nRxRk6I0=
   bucket: bossaosx
   skip_cleanup: true
   local_dir: deploy
